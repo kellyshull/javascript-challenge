@@ -42,6 +42,9 @@ submit.on("click", function() {
   // prevent refreshing the page
   d3.event.preventDefault();
 
+  // remove any children (THIS IS HOW THE HTML RESETS)
+  tbody.html("");
+
   // select your input element from html 
   var inputElement = d3.select("#datetime");
 
@@ -57,8 +60,17 @@ submit.on("click", function() {
   console.log(filteredData);
 
   // append the input value to the webpage / html using function above
+  filteredData.forEach(sightingDate => {
+    // console.log(sightingDate);  
+    let row = tbody.append("tr");
+    Object.values(sightingDate).forEach(value => {
+   // Append a cell to the row for each value in the ufoSighting object
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  });
 
-  
+
 
   
 });
