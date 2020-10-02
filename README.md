@@ -1,4 +1,4 @@
-# javascript-challenge
+# JavaScript Challenge: JavaScript and DOM Manipulation 
 
 ## Level 1: Automatic Table and Date Search (Required)
 
